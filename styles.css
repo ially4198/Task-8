@@ -1,0 +1,76 @@
+
+.loader{
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+span{
+  font-size: larger;
+  animation: textcolor 2s ease-in-out infinite;
+}
+.container{
+  display: flex;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+}
+.circle{
+  width: 90%;
+  height: 90%;
+  border-radius:50%;
+  position: absolute;
+  border: 10px solid transparent;
+  mix-blend-mode: overlay;
+  animation: rotate 1.5s ease-in-out infinite  ;
+  
+}
+.circle-1{
+  border-top-color: rgb(211, 238, 172);
+  animation: rotate 1.5s ease-in-out infinite  ;
+}
+.circle-2{
+  border-bottom-color: rgb(196, 42, 42);
+  animation: rotate 2s ease-in-out infinite;
+}
+.circle-3{
+  border-right-color: cyan;
+  animation: rotate 2.5s ease-out infinite;
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(1turn);
+  }
+}
+@keyframes textcolor{
+  0%{
+    color: aqua;
+  }
+  20%{
+    color: red;
+  }
+  40%{
+    color: greenyellow;
+  }
+  80%{
+    color: burlywood;
+  }
+  100%{
+    color: orange;
+  }
+}
+@media screen and (max-width:600px){
+  .container{
+    width: 200px;
+  height: 200px;
+  }
+}
+
